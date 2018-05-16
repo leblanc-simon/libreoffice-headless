@@ -55,6 +55,16 @@ docker run -e FILENAME=/tmp/document.docx -e UID=1000 -e GID=1000 -v /local-path
 * `UID` : L'UID à utiliser pour la génération du fichier PDF (logiquement l'UID de l'utilisateur courant)
 * `GID` : Le GID à utiliser pour la génération du fichier PDF (logiquement le GID de l'utilisateur courant)
 
+## Wrapper Go
+
+```bash
+# Compiler le programme Go
+go build convert.go
+
+# Ensuite pour l'utiliser
+./convert -filename document.docx -path /local-path/tmp
+```
+
 ## Auteurs
 
 * [SFoxDev](https://github.com/sfoxdev/docker-unoconv-alpine) (auteur original) 
